@@ -1,0 +1,25 @@
+<mxfile host="Electron" version="29.6.1">
+  <diagram name="Страница-1" id="d1">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0" background="#000000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="a" value="&lt;div&gt;Окно и признаки&lt;/div&gt;&lt;div&gt;НАЧАЛО&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="0" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p1" value="ratio = cal/dist" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="60" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p2" value="cumsum -&gt; скольз. среднее (k=30)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="120" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p3" value="pace_diff = diff(pace)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="180" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p4" value="speed_kmh = dist/(pace/60)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="240" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p5" value="cal_per_min = cal/pace" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="300" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="p6" value="Заменить не-конечные значения" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="360" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="e" value="&lt;div&gt;КОНЕЦ&lt;/div&gt;&lt;div&gt;признаки&lt;/div&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;" vertex="1" parent="1"><mxGeometry x="160" y="420" width="120" height="40" as="geometry" /></mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="a" target="p1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p1" target="p2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p2" target="p3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p3" target="p4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p4" target="p5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p5" target="p6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#ffffff;fontColor=#ffffff;" edge="1" parent="1" source="p6" target="e"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
