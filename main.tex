@@ -21,6 +21,7 @@
 \renewcommand\baselinestretch{1.33}\normalsize
 \setlength{\parindent}{1.25cm}
 \usepackage{indentfirst}
+\graphicspath{{img/}}
 
 \begin{document}
     \newpage\thispagestyle{empty}
@@ -94,6 +95,18 @@
 \item \texttt{cal} (float32) --- калории
 \item \texttt{zone} (uint8) --- пульсовая зона (1--5)
 \end{itemize}
+
+\section*{Запуск в Google Colab}
+
+\begin{enumerate}
+\item Открыть \url{https://colab.research.google.com/}.
+\item Загрузить блокнот \texttt{lab6\_colab.ipynb} (Файл $\rightarrow$ Загрузить блокнот).
+\item Выбрать \textbf{Среда выполнения $\rightarrow$ Выполнить все}.
+\item Дождаться сообщения «Готово. Сохранены файлы…» и скачать результаты (последняя ячейка).
+\item Скриншот вывода ячеек приложить к отчёту в раздел «Вывод программы».
+\end{enumerate}
+
+Блокнот сам генерирует \texttt{data.csv}, выполняет все 10 этапов NumPy и сохраняет итоговые файлы.
 \end{flushleft}
 
 \newpage
@@ -387,28 +400,35 @@ if __name__ == "__main__":
 \texttt{stage3\_normalized.npy}        & Данные + z\_dist после нормализации \\
 \texttt{conditional\_stats.csv}        & mean, median по cal\_per\_min при условии \\
 \texttt{conditional\_stats\_with\_p90.csv} & То же + p90 \\
-\texttt{final\_preprocessed.npy}       & Финальный массив (все 12 полей) \\
+\texttt{final\_preprocessed.npy}       & Финальный массив (все 13 полей) \\
 \hline
 \end{tabular}
 \end{center}
 
-\section*{Вывод программы (пример)}
+\section*{Вывод программы}
+
+\begin{center}
+\includegraphics[width=0.95\textwidth]{1.jpeg}
+\end{center}
 
 \begin{verbatim}
-Строк: 500000
-Память: 7000000 байт (6.676 Мбайт)
-NaN по полям: {'dist': 0, 'pace': 0, 'cal': 0}
-Inf по полям: {'dist': 0, 'pace': 0, 'cal': 0}
-Аномалий: 312 (0.06%)
+Строк: 12000
+Память: 228000 байт (0.217 Мбайт)
+NaN по полям: {'dist': 54, 'pace': 57, 'cal': 162}
+Inf по полям: {'dist': 29, 'pace': 28, 'cal': 28}
+Аномалий: 441 (3.67%)
 Групп: 50
-Размеры групп: min=9850, max=10200
-Доля роста pace: 49.87%, падения: 49.91%, без изменений: 0.22%
-Распределение sign: {-1: 249553, 0: 1112, 1: 249335}
-Доля замен после IQR: 0.82%
-Замены по группам (первые 10): [(1, 82), (2, 78), ...]
+Размеры групп: min=155, max=305
+Доля роста pace: 49.12%, падения: 48.84%, без изменений: 2.04%
+Распределение sign: {-1: 5659, 0: 236, 1: 5664}
+Доля замен после IQR: 0.00%
+Замены по группам (первые 10): [(1, 0), (2, 0), (3, 0), (4, 0), (5, 0),
+ (6, 0), (7, 0), (8, 0), (9, 0), (10, 0)]
 Логических нарушений: 0 (0.00%)
 Редкие категории zone: []
-Готово. Сохранены файлы: stage1_structured.npy, ...
+Готово. Сохранены файлы: stage1_structured.npy, stage3_normalized.npy,
+ conditional_stats.csv, conditional_stats_with_p90.csv, final_preprocessed.npy
+Полей: 13
 \end{verbatim}
 \end{flushleft}
 
